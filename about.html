@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Rebuilding Nepal</title>
+  <meta name="description" content="Learn about Rebuilding Nepal's mission, vision, and our commitment to community development and supporting Gen-Z protests." />
+  <meta property="og:title" content="About Us - Rebuilding Nepal" />
+  <meta property="og:description" content="Discover our mission to rebuild communities and support youth movements in Nepal." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="image-removebg-preview.png">
+  <style>
+    :root {
+  --color-primary: #00796b; /* teal */
+  --color-secondary: #004d40; /* dark teal */
+  --color-accent: #ff6f00; /* amber */
+  --color-bg: #f9f9f9;
+  --color-text: #222222;
+
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+
+  --transition-speed: 0.3s;
+  --max-width: 1200px;
+  --spacing: 1rem;
+}
+
+/* Reset and base */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  font-size: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility classes */
+
+.btn {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  outline: none;
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus {
+  background-color: var(--color-primary);
+  color: #fff;
+  outline: none;
+}
+
+/* Header */
+
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.header__nav {
+  display: flex;
+}
+
+.header__nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.header__nav-link {
+  font-weight: 600;
+  padding: 0.5em 0.75em;
+  border-radius: 4px;
+  color: var(--color-text);
+  transition: background-color var(--transition-speed);
+}
+
+.header__nav-link:hover,
+.header__nav-link:focus,
+.header__nav-link[aria-current="page"] {
+  background-color: var(--color-primary);
+  color: #fff;
+  outline: none;
+}
+
+.header__donate-btn {
+  margin-left: 1rem;
+  white-space: nowrap;
+}
+
+/* Hamburger nav toggle */
+
+.header__nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 28px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.header__nav-toggle:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.header__nav-toggle-bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hero */
+
+.hero {
+  background-color: #e0f2f1;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  color: var(--color-text);
+}
+
+/* About content */
+
+.about-content__container {
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-content__text {
+  flex: 1;
+}
+
+.about-content__text h2,
+.about-content__text h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin-top: 0;
+}
+
+.about-content__text p {
+  margin-bottom: 1rem;
+}
+
+.about-content__image img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 100%;
+  height: auto;
+}
+
+/* Values */
+
+.values__container {
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.values__container h2 {
+  font-family: var(--font-heading);
+  color: var(--color-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.values__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.value-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.value-card h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.value-card p {
+  margin: 0;
+  color: var(--color-text);
+}
+
+/* Responsive */
+
+@media (min-width: 768px) {
+  .about-content__container {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .about-content__image {
+    flex: 1;
+  }
+  .about-content__text {
+    flex: 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .header__nav-link {
+    padding: 1rem;
+    border-top: 1px solid #eee;
+  }
+
+  .header__nav-toggle {
+    display: flex;
+  }
+
+  .header__nav[aria-expanded="true"] {
+    max-height: 500px; /* enough to show all links */
+  }
+}
+  </style>
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="header__container">
+      <a href="index.html" class="header__logo" aria-label="Rebuilding Nepal Home">Rebuilding Nepal</a>
+      <button class="header__nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="header__nav-toggle-bar"></span>
+        <span class="header__nav-toggle-bar"></span>
+        <span class="header__nav-toggle-bar"></span>
+      </button>
+      <nav id="primary-navigation" class="header__nav" role="navigation" aria-label="Primary navigation">
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link">Home</a></li>
+          <li><a href="about.html" class="header__nav-link" aria-current="page">About</a></li>
+          <li><a href="team.html" class="header__nav-link">Team</a></li>
+          <li><a href="documentation.html" class="header__nav-link">Documentation</a></li>
+          <li><a href="gallery.html" class="header__nav-link">Gallery</a></li>
+          <li><a href="works.html" class="header__nav-link">Works</a></li>
+          <li><a href="contact.html" class="header__nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="donate.html" class="btn btn--primary header__donate-btn">Donate</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="About Us">
+      <div class="hero__content">
+        <h1 class="hero__title">About Rebuilding Nepal</h1>
+        <p class="hero__subtitle">Our mission to empower communities and support the youth movement for a better Nepal.</p>
+      </div>
+    </section>
+
+    <section class="about-content" aria-label="Our Story">
+      <div class="about-content__container">
+        <div class="about-content__text">
+          <h2>Our Story</h2>
+          <p>Rebuilding Nepal was founded in response to the growing need for community support and youth empowerment across Nepal. We believe in the power of collective action and the importance of supporting Gen-Z protests that advocate for positive change.</p>
+          
+          <h3>Our Mission</h3>
+          <p>To rebuild and strengthen communities through volunteer efforts, resource distribution, and supporting youth-led initiatives that drive social and political change.</p>
+          
+          <h3>Our Vision</h3>
+          <p>A Nepal where every community thrives, youth voices are heard, and positive change is driven by collective action and mutual support.</p>
+        </div>
+        <div class="about-content__image">
+          <img src="https://placehold.co/600x400" alt="Team of volunteers working together on community rebuilding project" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="values" aria-label="Our Values">
+      <div class="values__container">
+        <h2>Our Values</h2>
+        <div class="values__grid">
+          <div class="value-card">
+            <h3>Community First</h3>
+            <p>We prioritize the needs of local communities and work directly with residents to ensure our efforts make a meaningful impact.</p>
+          </div>
+          <div class="value-card">
+            <h3>Youth Empowerment</h3>
+            <p>We support and amplify the voices of young Nepalis who are driving positive change through peaceful protests and advocacy.</p>
+          </div>
+          <div class="value-card">
+            <h3>Sustainability</h3>
+            <p>Our projects are designed to create lasting change and build resilient communities that can thrive long-term.</p>
+          </div>
+          <div class="value-card">
+            <h3>Transparency</h3>
+            <p>We maintain open communication about our work, finances, and impact to build trust with our supporters and communities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <address class="footer__contact">
+        <p>Contact us: <a href="mailto:org.rebuildingnepal@gmail.com">org.rebuildingnepal@gmail.com</a> | Phone: +977 9767233027</p>
+        <p>Kathmandu, Nepal</p>
+      </address>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <ul class="footer__nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+<div class="footer__social">
+  <a href="https://www.tiktok.com/@rebuilding.nepal?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok" class="footer__social-link">
+    <img src="Tiktok_icon.svg.png" alt="TikTok" width="24" height="24">
+  </a>
+  <a href="https://www.instagram.com/rebuilding_nepal/" target="_blank" aria-label="Instagram" class="footer__social-link">
+    <img src="instagram" alt="Instagram" width="24" height="24">
+  </a>
+</div>
+      <p class="footer__copyright">&copy; 2025 Rebuilding Nepal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

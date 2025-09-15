@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rebuilding Nepal - Home</title>
+  <meta name="description" content="Rebuilding Nepal volunteer organization - Join us to rebuild communities and support Gen-Z protests." />
+  <meta property="og:title" content="Rebuilding Nepal - Home" />
+  <meta property="og:description" content="Join Rebuilding Nepal to volunteer, donate, and support our community projects." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="image-removebg-preview.png">
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="header__container">
+      <a href="index.html" class="header__logo" aria-label="Rebuilding Nepal Home">Rebuilding Nepal</a>
+      <button class="header__nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="header__nav-toggle-bar"></span>
+        <span class="header__nav-toggle-bar"></span>
+        <span class="header__nav-toggle-bar"></span>
+      </button>
+      <nav id="primary-navigation" class="header__nav" role="navigation" aria-label="Primary navigation">
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link" aria-current="page">Home</a></li>
+          <li><a href="about.html" class="header__nav-link">About</a></li>
+          <li><a href="team.html" class="header__nav-link">Team</a></li>
+          <li><a href="documentation.html" class="header__nav-link">Documentation</a></li>
+          <li><a href="gallery.html" class="header__nav-link">Gallery</a></li>
+          <li><a href="works.html" class="header__nav-link">Works</a></li>
+          <li><a href="contact.html" class="header__nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="donate.html" class="btn btn--primary header__donate-btn">Donate</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Hero section">
+      <div class="hero__content">
+        <h1 class="hero__title">Rebuilding Nepal</h1>
+        <p class="hero__subtitle">Empowering communities, supporting Gen-Z protests, and rebuilding a stronger Nepal.</p>
+        <div class="hero__ctas">
+          <a href="team.html" class="btn btn--secondary">Volunteer</a>
+          <a href="donate.html" class="btn btn--primary">Donate</a>
+        </div>
+      </div>
+      <img src="group pic.png" alt="Volunteers rebuilding a community" class="hero__image" loading="lazy" />
+    </section>
+
+    <section class="stats" aria-label="Quick statistics">
+      <div class="stats__item">
+        <span class="stats__number" data-target="1500">0</span>
+        <span class="stats__label">Volunteers Helped</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__number" data-target="300">0</span>
+        <span class="stats__label">Streets Cleaned</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__number" data-target="12000">0</span>
+        <span class="stats__label">Items Donated</span>
+      </div>
+    </section>
+
+    <section class="featured-work" aria-label="Featured recent work">
+      <h2>Featured Project</h2>
+      <article class="card card--featured">
+        <img src="group pic.png" alt="Community rebuilding project" class="card__image" loading="lazy" />
+        <div class="card__content">
+          <h3 class="card__title">Community Rebuilding in Kathmandu</h3>
+          <p class="card__description">A recent initiative to restore homes and public spaces affected by natural disasters.</p>
+          <a href="works.html" class="btn btn--primary">See More Works</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__container">
+      <address class="footer__contact">
+        <p>Contact us: <a href="mailto:org.rebuildingnepal@gmail.com">org.rebuildingnepal@gmail.com</a> | Phone: +977 9767233027</p>
+        <p>Kathmandu, Nepal</p>
+      </address>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <ul class="footer__nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+<div class="footer__social">
+  <a href="https://www.tiktok.com/@rebuilding.nepal?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok" class="footer__social-link">
+    <img src="Tiktok_icon.svg.png" alt="TikTok" width="24" height="24">
+  </a>
+  <a href="https://www.instagram.com/rebuilding_nepal/" target="_blank" aria-label="Instagram" class="footer__social-link">
+    <img src="instagram" alt="Instagram" width="24" height="24">
+  </a>
+</div>
+
+      <p class="footer__copyright">&copy; 2025 Rebuilding Nepal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
