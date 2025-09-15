@@ -193,29 +193,23 @@
     }
 
     /* Hero */
+.hero {
+  background-color: #e0f2f1;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* centers vertically */
+  text-align: center;
+  min-height: 50vh; /* optional: makes it look balanced */
+}
 
-    .hero {
-      background-color: #e0f2f1;
-      padding: 3rem 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+.hero__content {
+  flex: unset; /* reset flex rule from media query */
+  padding: 0;
+  max-width: 700px;
+}
 
-    .hero__title {
-      font-family: var(--font-heading);
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      color: var(--color-secondary);
-    }
-
-    .hero__subtitle {
-      font-size: 1.25rem;
-      margin-bottom: 1.5rem;
-      max-width: 600px;
-      color: var(--color-text);
-    }
 
     .hero__ctas {
       display: flex;
@@ -241,11 +235,13 @@
       text-align: center;
     }
 
-    .team-leaders__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
+ .team-leaders__grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
 
     .team-member {
       background: #fff;
@@ -347,17 +343,17 @@
 
     /* Responsive */
 
-    @media (min-width: 768px) {
-      .hero {
-        flex-direction: row;
-        text-align: left;
-        padding: 4rem 2rem;
-      }
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    padding: 4rem 2rem;
+  }
 
-      .hero__content {
-        flex: 1;
-        padding-right: 2rem;
-      }
+  .hero__content {
+    flex: 1;
+    padding-right: 2rem;
+  }
 
       .team-leaders__grid {
         grid-template-columns: repeat(3, 1fr);
@@ -425,8 +421,8 @@
   <main>
     <section class="hero" aria-label="Our Team">
       <div class="hero__content">
-        <h1 class="hero__title">Our Team</h1>
-        <p class="hero__subtitle">Meet the passionate individuals dedicated to rebuilding Nepal's communities.</p>
+        <center><h1 class="hero__title">Our Team</h1>
+        <p class="hero__subtitle">Meet the passionate individuals dedicated to rebuilding Nepal's communities.</p></center>
         <div class="hero__ctas">
           <a href="#volunteer" class="btn btn--secondary">Join Our Team</a>
         </div>
@@ -517,6 +513,3 @@
   <script src="js/main.js" defer></script>
 </body>
 </html>
-
-
-
